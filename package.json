@@ -1,0 +1,14 @@
+{
+  "name": "database-backup",
+  "version": "1.0.0",
+  "description": "A backup utility for rethinkdb databases",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Me",
+  "license": "MIT",
+  "dependencies": {
+    "rethinkdbdash": "^2.3.31"
+  }
+}

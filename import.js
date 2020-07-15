@@ -70,7 +70,9 @@ async function restore () {
                         console.log(`Backing up ${dbName}: ${tableName}`);
                         if (!tables.includes(tableName)) {
                             console.log(`No table exists for ${dbName}: ${tableName}, creating one.`);
-                            await r.db(dbName).tableCreate(tableName);
+                            await r.db(dbName).tableCreate(tableName, {
+                                primaryKey: tableName.toLowerCase() === "users" && dbName.toLowerCase() === "main" ? "discordId" : "id"
+                            });
                         }
 
                         let raw = await toPromise(readFile, join(path, dbName, tableFile.name), {

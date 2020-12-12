@@ -9,6 +9,7 @@
   "author": "Me",
   "license": "MIT",
   "dependencies": {
+    "pg": "^8.5.1",
     "rethinkdbdash": "^2.3.31"
   }
 }
